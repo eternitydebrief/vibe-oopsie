@@ -26,7 +26,7 @@ def print_json(result: ScanResult):
                 "date": c.date,
                 "is_dangling": c.is_dangling,
                 "secrets": [
-                    {"type": f.pattern_name, "match": f.matched_text, "line": f.line_number}
+                    {"type": f.pattern_name, "match": f.matched_text, "line": f.line_number, "context": f.context}
                     for f in c.findings
                 ],
             }
